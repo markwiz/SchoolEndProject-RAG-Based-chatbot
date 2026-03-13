@@ -8,7 +8,8 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = BASE_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
-CHROMA_DIR = BASE_DIR / "chroma_db"
+
+QDRANT_PATH = BASE_DIR / "qdrant_data"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
