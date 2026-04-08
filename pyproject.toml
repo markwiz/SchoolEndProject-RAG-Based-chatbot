@@ -12,6 +12,7 @@ dependencies = [
     "langchain-chroma",
     "langchain-community",
     "langchain-openai",
+    "langchain-qdrant>=1.1.0",
     "pypdf",
     "python-dotenv",
     "uvicorn",
