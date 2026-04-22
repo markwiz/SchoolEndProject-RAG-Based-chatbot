@@ -19,7 +19,7 @@ def format_docs(docs) -> str:
     return "\n\n".join(formatted)
 
 
-def answer_question(question: str):
+def answer_question(question: str,  intent: str = "general"):
     retriever = get_retriever()
     docs = retriever.invoke(question)
 
@@ -30,6 +30,7 @@ def answer_question(question: str):
 
     response = chain.invoke(
         {
+            "intent": intent,
             "context": context,
             "question": question,
         }
